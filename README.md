@@ -1,66 +1,73 @@
-# ✅ Remote Todo App – React Micro Frontend
+# ✅ Todo MFE – Remote App
 
-This is the **remote MFE** (Micro Frontend) that exposes a **Todo List Component** for use in a host container via **Webpack 5 Module Federation**.
-
----
-
-## 📦 Tech Stack
-
-- React
-- Webpack 5 Module Federation
-- JavaScript
-- Micro Frontend Architecture
+This project is the **Remote Microfrontend App** for a Todo List built with **React** and **TypeScript**, exposing independent modules using **Webpack 5 Module Federation**. These modules are loaded into the `todo-mfe-host` app.
 
 ---
 
-## 🚀 How It Works
+## 🧠 Exposed Modules
 
-This app exposes its **Todo App** module to be consumed by:
+The following modules are exposed to the host app:
 
-🔗 [`host-app`](https://github.com/rohittiwariofficial/host-app)
+1. **TodoList** – Displays the full list of todo items  
+2. **TodoItem** – Renders a single task item  
+3. **Filter** – Dropdown to filter tasks by status
 
-It uses Webpack's `ModuleFederationPlugin` to expose remote components.
+These modules are federated and dynamically imported by:
+
+👉 [`todo-mfe-host`](https://github.com/rohittiwariofficial/todo-mfe-host)
 
 ---
 
-## 🔧 Setup & Run
+## 🚀 Getting Started
 
-### 1. Clone the repo
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/rohittiwariofficial/remote-todo-app
-cd remote-todo-app
-npm install
+git clone https://github.com/rohittiwariofficial/todo-mfe-remote.git
+cd todo-mfe-remote
 ```
 
-### 2. Start the app
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the development server
 
 ```bash
 npm start
+# or
+yarn start
 ```
 
-> ℹ️ This app runs by default on `http://localhost:3001` and exposes its module to the host app.
+> This will start the remote app at [http://localhost:3001](http://localhost:3001)
 
 ---
 
-## 🧠 Folder Structure
+## ✅ Features
 
-```
-remote-todo-app/
-├── public/
-├── src/
-│   ├── TodoApp.js
-│   └── bootstrap.js
-├── webpack.config.js
-```
+- Fully modular, independently deployable frontend  
+- Federated modules exposed via Webpack 5  
+- Type-safe codebase using TypeScript  
+- Easy integration into any compatible host app
 
 ---
 
-## 🧩 Related Project
+## 🔧 Tech Stack
 
-This app is designed to be consumed by:
+- React  
+- TypeScript  
+- Webpack 5 (Module Federation)  
+- HTML5, CSS3
 
-👉 [`host-app`](https://github.com/rohittiwariofficial/host-app)
+---
+
+## 🧩 Related Microfrontend
+
+👉 [`todo-mfe-host`](https://github.com/rohittiwariofficial/todo-mfe-host)
 
 ---
 
@@ -71,3 +78,7 @@ Senior MERN / Backend Developer
 [LinkedIn](https://www.linkedin.com/in/rohittiwariofficial)
 
 ---
+
+## 📜 License
+
+MIT – free to use and modify.
